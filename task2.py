@@ -1,8 +1,9 @@
-import random 
+import sys
 import time
-
-a = random.randint(0, 99877332288888)
-b = random.randint(0, 779999880221)
+sys.set_int_max_str_digits(9000)
+ 
+a = int('7' * 4301)
+b = int('9' * 4300)
 
 def gsd(a: int, b: int) -> list[int]:
     counter = 0
@@ -15,4 +16,4 @@ def gsd(a: int, b: int) -> list[int]:
 result = gsd(a,b)
 end_time = time.perf_counter()    
 
-print(f"gsd(a,b) = {result}, end time: {end_time}")
+print(f"gsd(a,b)= {result}, end time: {end_time}")
